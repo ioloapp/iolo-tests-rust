@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'iolo-tests-rust'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=iolo-tests-rust",
+                    "--package=iolo-tests-rust"
+                ],
+                "filter": {
+                    "name": "iolo-tests-rust",
+                    "kind": "bin"
+                }
+            },
+            "args": ["user"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'iolo-tests-rust'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=iolo-tests-rust",
+                    "--package=iolo-tests-rust"
+                ],
+                "filter": {
+                    "name": "iolo-tests-rust",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
